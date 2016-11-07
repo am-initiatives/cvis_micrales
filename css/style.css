@@ -1,0 +1,44 @@
+.inputDisabled
+{
+	width: 100%
+}
+
+.important {
+    margin-left: 0;
+    padding: 0;
+    font-size: 13px !important;
+    font-weight: normal;
+    color: #ff0000 !important;
+}
+select
+{
+	width: 150px;
+}
+textarea
+{
+	resize: none;
+}
+
+.instruction {
+    margin-top: 3px;
+    overflow: visible !important;
+    font-size: 11px;
+    font-style: italic;
+    color: #939393;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#monome,#culot
+{
+	display: flex;
+	justify-content: space-around;
+	padding : 3px;
+}
