@@ -23,8 +23,8 @@ session_start();
 			<tbody>
 				<tr>
 					<td colspan="3">
-						<input type="radio" name="chn_avecsans" value="Avec" id="Avec" checked="checked" onclick="MF(this)"/> <label for="moins15">Avec</label></br>
-						<input type="radio" name="chn_avecsans" value="Sans" id="Sans" onclick="MF(this)"/> <label for="medium15-25">Sans</label>
+						<input type="radio" name="chn_avecsans" value="Avec" id="Avec" checked="checked" onclick="MF(this)"/> <label for="moins15">Avec chaîne</label></br>
+						<input type="radio" name="chn_avecsans" value="Sans" id="Sans" onclick="MF(this)"/> <label for="medium15-25">Sans chaîne</label>
 					</td>
 					<td rowspan="6">
 						<img id="img_chn" style="visibility: hidden;" alt="image de la chaine" />
@@ -37,11 +37,11 @@ session_start();
 						</p>
 					</td>
 					<td>
-						<select name="chn_longueur" id="longueur" onclick="longueur_chg(this);" onchange="longueur_chg(this);">
+						<select name="chn_longueur" id="longueur" onclick="longueur_chg(this);">
 							<option value="none">Selection</option>
 							<option id="0" value="45cm">45cm</option>
 							<option id="1" value="50cm">50cm</option>
-
+							<option id="2" value="55cm">55cm</option>
 					</select>
 					</td>
 				</tr>
@@ -50,7 +50,7 @@ session_start();
 						<p id="titre_metal">Métal</p>
 					</td>
 					<td>
-						<select name="chn_metal" id="metal"onclick="metal_chg(this);" onchange="metal_chg(this);"></select>
+						<select name="chn_metal" id="metal"onclick="metal_chg(this);"></select>
 					</td>
 				</tr>
 				<tr>
@@ -60,7 +60,7 @@ session_start();
 						</p>
 					</td>
 					<td>
-						<select name="chn_type" id="type" onclick="type_chg(this);" onchange="type_chg(this);"></select>
+						<select name="chn_type" id="type" onclick="type_chg(this);"></select>
 					</td>
 				</tr>
 				<tr>
@@ -70,7 +70,7 @@ session_start();
 						</p>
 					</td>
 					<td>
-						<select name="chn_masse" id="masse" onclick="masse_chg(this);" onchange="masse_chg(this);"></select>
+						<select name="chn_masse" id="masse" onclick="masse_chg(this);"></select>
 					</td>
 				</tr>
 				<tr>

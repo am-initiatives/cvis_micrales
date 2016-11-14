@@ -23,8 +23,8 @@ session_start();
 			<tbody>
 				<tr>
 					<td colspan="2">
-						<input type="radio" name="avecsans" value="Avec" id="Avec" checked="checked" onclick="MF(this)"/> <label for="moins15">Avec</label></br>
-						<input type="radio" name="avecsans" value="Sans" id="Sans" onclick="MF(this)"/> <label for="medium15-25">Sans</label>
+						<input type="radio" name="avecsans" value="Avec" id="Avec" checked="checked" onclick="MF(this)"/> <label for="moins15">Avec équerre</label></br>
+						<input type="radio" name="avecsans" value="Sans" id="Sans" onclick="MF(this)"/> <label for="medium15-25">Sans équerre</label>
 					</td>
 					<td rowspan="2">
 						<img id="img_metal" style="visibility: hidden;" src="../img/fine.jpg" alt="image du métal choisi" />
@@ -35,7 +35,7 @@ session_start();
 						<p id="titre_metal">Métal</p>
 					</td>
 					<td>
-						<select id="metal" name="eqr_metal" onclick="metal_chg(this);" onchange="metal_chg(this);">
+						<select id="metal" name="eqr_metal" onclick="metal_chg(this);">
 							<option value="none">Selection</option>
 							<option id="0" value="OR JAUNE">OR JAUNE</option>
 							<option id="1" value="OR BLANC">OR BLANC</option>
@@ -48,7 +48,7 @@ session_start();
 						<p id="titre_epaisseur">Epaisseur</p>
 					</td>
 					<td>
-						<select id="epaisseur" name="eqr_epaisseur" onclick="epais_chg(this);" onchange="epais_chg(this);" ></select>
+						<select id="epaisseur" name="eqr_epaisseur" onclick="epais_chg(this);"></select>
 					</td>
 					<td rowspan="2">
 						<img id="img_epais" style="visibility: hidden;" src="../img/fine.jpg" alt="épaisseur choisie" />
@@ -59,7 +59,7 @@ session_start();
 						<p id="titre_gravure">Gravure</p>
 					</td>
 					<td>
-						<select id="gravure" name="eqr_gravure" onclick="grav_chg(this);" onchange="grav_chg(this);"></select>
+						<select id="gravure" name="eqr_gravure" onclick="grav_chg(this);"></select>
 					</td>
 				</tr>
 				<tr>
@@ -67,7 +67,7 @@ session_start();
 						<p id='titre_encoche'>Encoche</p>
 					</td>
 					<td>
-						<select id="encoche" name="eqr_encoche" onclick="enc_chg(this);" onchange="enc_chg(this);"></select>
+						<select id="encoche" name="eqr_encoche" onclick="enc_chg(this)";></select>
 					</td>
 					<td rowspan="2">
 						<img id="img_encoche" src="../img/Encoche.jpg" alt="image avec/sans encoche" />

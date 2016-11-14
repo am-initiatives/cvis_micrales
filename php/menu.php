@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require 'config.php';
 require_once 'functions.php';
@@ -14,9 +13,6 @@ if (isset($_POST['info_bucque']))
 	$_SESSION['info_bucque']= $_POST['info_bucque'];
 	$_SESSION['pg']= $_POST['pg'];
 }
-
-
-
 if (isset($_POST['avecsans']) && isset($_POST['eqr_ref']))
 {
 	if ($_POST['avecsans']=="Avec")
@@ -63,7 +59,6 @@ if (isset($_POST['avecsans']) && isset($_POST['eqr_ref']))
 		}
 	}
 }
-
 if (isset($_POST['grv_alignementA']))
 {
 	$_SESSION['gravure']['grv_alignementA'] = $_POST['grv_alignementA'];
@@ -268,9 +263,7 @@ $prix_eqr = getPrixEquerre();
 $prix_chn = getPrixChaine();
 $prix_livr = getPrixLivraison();
 $frais_dossier = getFraisDossier();
-
 $prix_total = $prix_eqr + $prix_chn + $prix_livr + $frais_dossier;
-
 ?>
 
 
@@ -297,18 +290,16 @@ Total à payer</h1>
 		<td>+</td>
 		<td><input value="<?php echo number_format($prix_chn, 2, ',', ' '); ?>€" id="total" disabled="true" class="inputDisabled" type="text"></td>
 		<td>+</td>
-		<td><input name="Formula3" id="total" disabled="true" value="<?php echo number_format($prix_livr, 2, '.', ' '); ?>€" class="inputDisabled" type="text"></td>
+		<td><input name="Formula3" id="total" disabled="true" value="<?php echo number_format($prix_livr, 2, ',', ' '); ?>€" class="inputDisabled" type="text"></td>
 		<td>+</td>
-		<td><input name="Formula3" id="total" disabled="true" class="inputDisabled" type="text" value="<?php echo number_format($frais_dossier, 2, '.', ' '); ?>€"></td>
+		<td><input name="Formula3" id="total" disabled="true" class="inputDisabled" type="text" value="<?php echo number_format($frais_dossier, 2, ',', ' '); ?>€"></td>
 		<td>=</td>
-		<td ><input name="Formula3" id="total" disabled="true" class="inputDisabled" value="<?php echo number_format($prix_total, 2, '.', ' '); ?>€"" type="text"><td>
+		<td ><input name="Formula3" id="total" disabled="true" class="inputDisabled" value="<?php echo number_format($prix_total, 2, ',', ' '); ?>€"" type="text"><td>
 		</tr>
 		</tbody>
 		</table>
 	
 </br>
-
-
 <form action="confirmer.php">
 <input type="button"  class="btn btn-sm btn-default" onclick="Verifier_formulaire(this.form)" name="apropos" value="Suite de la commande">
 </form>
@@ -316,12 +307,6 @@ Total à payer</h1>
 </div>
 </div>
 </body>
-
-
 <?php include("includes/script.php"); ?>
-
 <script src="../js/menu_java.js"></script>
-
-
-
 </html>

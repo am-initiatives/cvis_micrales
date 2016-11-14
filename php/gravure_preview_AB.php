@@ -5,6 +5,8 @@ if(isset($_SESSION)) $tmp = $_SESSION;
 session_start();
 if(isset($tmp)) $_SESSION = $tmp;
 require 'config.php';
+
+if(!isset($_SESSION['gravure'])) $_SESSION['gravure'] = array();
 if(!isset($_SESSION['eqr_ref']) || !isset($_SESSION['gravure'])) exit;
 /* vérification préléminaire de tous les caractères (pour pas aller chercher des fichiers n'importe où) */
 for($k=1; $k<=10; $k++)

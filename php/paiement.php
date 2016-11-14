@@ -4,6 +4,8 @@ session_start();
 require 'config.php';
 require_once 'functions.php';
 
+if(!isset($_POST['session_serial'])) exit;
+
 $session_serial = sha1(serialize($_SESSION));
 if($session_serial != $_POST['session_serial'])
 {
@@ -85,10 +87,10 @@ $insert_stmt->close();
   $(document).ready(function() {
     $('#lydiaButton').payWithLYDIA({
       amount: <?php echo $prix_total; ?>, // amount in €
-      vendor_token: '5816408d3abf7719676865',
-      recipient: '0711223344', //cellphone or email of your client. Leave it like this for your test
-      message : "Micrale, commande <?php echo str_pad($id_commande, 5, '0', STR_PAD_LEFT); ?>", //object of the payment
-      env: 'test',
+      vendor_token: '<?php echo $lydia_public_token; ?>',
+      recipient: '<?php echo htmlentities(str_replace("'", '', $_SESSION['info_telephone']), ENT_QUOTES, 'UTF-8'); ?>', //cellphone or email of your client. Leave it like this for your test
+      message : "Micrale, commande <?php echo str_pad($id_commande, 6, '0', STR_PAD_LEFT); ?>", //object of the payment
+      env: '<?php echo $lydia_env; ?>',
       render : '<img src="https://lydia-app.com/assets/img/paymentbutton.png" />', //button image
       // The client will be redirect to this URL after the payment
       browser_success_url : "<?php echo 'http://' . $_SERVER['HTTP_HOST'] . $base_folder . '/php/succes.php?id=' . $id_commande; ?>",

@@ -3,7 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<form action="menu.php" method="post">
+
 <head>
 		<?php include("includes/meta.php"); ?>
         <link rel="stylesheet" href="../css/style.css" />
@@ -11,6 +11,7 @@ session_start();
  </head>
  <body>
 
+ <form action="menu.php" method="post" name="info">
 <div class="container theme-showcase">
 	<div class="page-header">
 		<h1>Informations personnelles</h1>
@@ -62,7 +63,7 @@ session_start();
 							</select>
 						</td>
 						<td>
-							<input name="info_proms" id="total" class="inputDisabled" type="text">
+							<input name="info_proms" id="total" class="inputDisabled" type="text" value="214">
 						</td>
 					</tr>
 					<tr>
@@ -70,7 +71,7 @@ session_start();
 							Nom<em class="important">*</em>
 						</td>
 						<td colspan="2">
-							<input name="info_nom" id="id_nom"  class="inputDisabled" type="text">
+							<input name="info_nom" id="id_nom"  class="inputDisabled" type="text" required="required">
 						</td>
 					</tr>
 					<tr>
@@ -78,15 +79,15 @@ session_start();
 							Prénom<em class="important">*</em>
 						</td>
 						<td colspan="2">
-							<input name="info_prenom" id="id_prenom"  class="inputDisabled" type="text">
+							<input name="info_prenom" id="id_prenom"  class="inputDisabled" type="text" required="required">
 						</td>
 					</tr>
 					<tr>
 						<td>
-							Téléphone
+							Téléphone<em class="important">*</em>
 						</td>
 						<td colspan="2">
-							<input name="info_telephone" id="telephone" class="inputDisabled" type="text">
+							<input name="info_telephone" id="telephone" class="inputDisabled" type="text" required="required">
 						</td>
 					</tr>
 					<tr>
@@ -94,13 +95,14 @@ session_start();
 							Mail<em class="important">*</em>
 						</td>
 						<td colspan="2">
-							<input name="info_mail" id="id_mail"  class="inputDisabled" type="text">
+							<input name="info_mail" id="id_mail"  class="inputDisabled" type="text" required="required">
 						</td>
 					</tr>
-					
+					<tr>
 					<td colspan="3">
-						<input type="button" onclick="Verifier_formulaire(this.form)" name="Info" value="Valider" class="btn btn-sm btn-default">
+						<input type="submit" name="Info" value="Valider" class="btn btn-sm btn-default">
 					</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
@@ -113,6 +115,28 @@ session_start();
 </footer>
 </form>
 <?php include("includes/script.php"); ?>
-
-<script src="../js/info_java.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("form[name=info]").validate({
+		rules: {
+			info_nom: "required",
+			info_prenom: "required",
+			info_telephone: "required",
+			info_mail: { required: true, email: true }
+		},
+		messages: {
+			info_nom: "Le champ nom est vide",
+			info_prenom: "Le champ prénom est vide",
+			info_telephone: "Le champ téléphone est vide",
+			info_mail: "L'adresse email n'est pas valide"
+		},
+		submitHandler: function(f) {
+			f.submit();
+		},
+		error: function(error) {
+			alert(error.text());
+		}
+	});
+});
+</script>
 </html>

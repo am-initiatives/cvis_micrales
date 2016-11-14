@@ -6,6 +6,31 @@ require_once 'functions.php';
 
 $prix_eqr = getPrixEquerre();
 $prix_chn = getPrixChaine();
+
+// si pas de chaine ni d'équerre, on redirige
+if($prix_eqr == 0 && $prix_chn == 0)
+{
+	 ?>
+	 <script type="text/javascript">
+	 alert("Tu dois choisir au moins une chaîne ou une équerre pour pouvoir commander.");
+	 window.location = "menu.php";
+	 </script>
+	 <?php
+	 exit;
+}
+
+// si pas d'info de PG, on redirige
+if(empty($_SESSION['info_nom']) || empty($_SESSION['info_prenom']) || empty($_SESSION['info_telephone']) || empty($_SESSION['info_mail']))
+{
+	?>
+	 <script type="text/javascript">
+	 alert("Certains champs obligatoires sont vides.");
+	 window.location = "menu.php";
+	 </script>
+	 <?php
+	 exit;
+}
+
 $prix_livr = getPrixLivraison();
 $frais_dossier = getFraisDossier();
 

@@ -1,2 +1,3 @@
 <?php
-header('Location: menu.php');
+header('Location: ./menu.php');
+exit;
