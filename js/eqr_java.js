@@ -106,23 +106,22 @@ function epais_chg()
 	}
 	grav_chg()
 }
+
 function grav_chg()
 {
 	document.getElementById("encoche").innerHTML = "";
 	if (document.getElementById("gravure").value != ""){
 	var encoche = document.createElement("option");
-	encoche.id= "Avec encoche";
-	encoche.value= "Avec encoche";
-	encoche.textcontent= "Avec encoche";
-	encoche.appendChild(document.createTextNode("Avec encoche"));
-	document.getElementById("encoche").appendChild(encoche);
-	encoche = document.createElement("option");
 	encoche.id= "Sans encoche";
 	encoche.value= "Sans encoche";
 	encoche.textcontent= "Sans encoche";
 	encoche.appendChild(document.createTextNode("Sans encoche"));
-	
-	
+	document.getElementById("encoche").appendChild(encoche);
+	encoche = document.createElement("option");
+	encoche.id= "Avec encoche";
+	encoche.value= "Avec encoche";
+	encoche.textcontent= "Avec encoche";
+	encoche.appendChild(document.createTextNode("Avec encoche"));
 	document.getElementById("encoche").appendChild(encoche);
 	}
 	document.getElementById("total").value = "";
