@@ -49,10 +49,18 @@ if(isset($_SESSION['lettre_modif']))
 <h1>Gravure</h1>
 </div>
 
+<div class='col-xs-12 col-sm-6 col-md-5'  style="width: 83.4%; height: 10%;">
+	<div class='panel panel-default' > 
+	<div id='monome' class='panel-body'>
+		<img src="../img/faces.jpg" style="width: 50%; height: 50%;"/>
+	</div>
+	</div>
+</div>
+<div style="clear:both;"></div>
 <div class='col-xs-12 col-sm-6 col-md-5'>
 	<div class='panel panel-default'> 
 		<div id='title' class='panel-heading'>
-			Branche A
+			Branche A - Recto - Gauche
 		</div>
 		<div id='monome' class='panel-body'>
 			<?php 
@@ -76,7 +84,7 @@ if(isset($_SESSION['lettre_modif']))
 <div class='col-xs-12 col-sm-6 col-md-5'>
 	<div class='panel panel-default'> 
 		<div id='title' class='panel-heading'>
-			Branche B
+			Branche B - Recto - Droite
 		</div>
 		<div id='monome' class='panel-body'>
 			<?php 
@@ -99,7 +107,7 @@ if(isset($_SESSION['lettre_modif']))
 <div class='col-xs-12 col-sm-6 col-md-5'>
 	<div class='panel panel-default'> 
 		<div id='title' class='panel-heading'>
-			Branche C
+			Branche C - Verso (face du poinçon de garantie) - Gauche
 		</div>
 		<div id='monome' class='panel-body'>
 			<?php 
@@ -122,7 +130,7 @@ if(isset($_SESSION['lettre_modif']))
 <div class='col-xs-12 col-sm-6 col-md-5'>
 	<div class='panel panel-default'> 
 		<div id='title' class='panel-heading'>
-			Branche D
+			Branche D - Verso (face du poinçon de garantie) - Droite
 		</div>
 		<div id='monome' class='panel-body'>
 			<?php 

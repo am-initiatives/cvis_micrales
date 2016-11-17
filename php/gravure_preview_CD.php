@@ -40,7 +40,7 @@ $eqr_stmt->fetch();
 $eqr_stmt->close();
 
 if(!defined('NO_OUTPUT')) header('Content-type: image/png');
-$eqr = imagecreatefrompng('../img/shema_eqr_' . ($encoche ? 'avec' : 'sans') . '_encoche.png');
+$eqr = imagecreatefrompng('../img/shema_eqr_' . ($encoche ? 'avec' : 'sans') . '_encoche_CD.png');
 
 /* branche C */
 /*************/

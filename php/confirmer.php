@@ -7,6 +7,8 @@ require_once 'functions.php';
 $prix_eqr = getPrixEquerre();
 $prix_chn = getPrixChaine();
 
+if(!isset($_SESSION['gravure'])) $_SESSION['gravure'] = array();
+
 // si pas de chaine ni d'équerre, on redirige
 if($prix_eqr == 0 && $prix_chn == 0)
 {

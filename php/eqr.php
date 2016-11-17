@@ -30,6 +30,7 @@ session_start();
 						<img id="img_metal" style="visibility: hidden;" src="../img/fine.jpg" alt="image du métal choisi" />
 					</td>
 				</tr>
+				
 				<tr>
 					<td>
 						<p id="titre_metal">Métal</p>
@@ -42,6 +43,11 @@ session_start();
 							<option id="2" value="ARGENT">ARGENT</option>
 						</select>
 					</td>
+				<tr>
+					<td colspan="3">
+					<p style="font-size: 8pt;">Si tu souhaites une équerre en <b>or rose</b>, contacte le CVis à l'adresse <a href="mailto:cvis.ue@gadz.org">cvis.ue@gadz.org</a> avant le 20 décembre afin de vérifier la disponibilité.</p>
+					</td>
+				</tr>
 				</tr>
 				<tr>
 					<td >
