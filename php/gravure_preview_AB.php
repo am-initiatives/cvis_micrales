@@ -52,7 +52,7 @@ $total_w = 0;
 $nb_lettres = 10;
 for($k = 10; $k >= 1; $k--)
 {
-    if(!isset($_SESSION['gravure']['A' . $k]) || empty($_SESSION['gravure']['A' . $k]['lettre']) || empty($_SESSION['gravure']['A' . $k]['police']))
+    if(!isset($_SESSION['gravure']['A' . $k]) || $_SESSION['gravure']['A' . $k]['lettre'] === '' || empty($_SESSION['gravure']['A' . $k]['police']))
         $nb_lettres--;
     else
         break;
@@ -60,7 +60,7 @@ for($k = 10; $k >= 1; $k--)
 
 for($i = 1; $i <= $nb_lettres; $i++)
 {
-    if(!isset($_SESSION['gravure']['A' . $i]) || empty($_SESSION['gravure']['A' . $i]['lettre']) || empty($_SESSION['gravure']['A' . $i]['police'])) {
+    if(!isset($_SESSION['gravure']['A' . $i]) || $_SESSION['gravure']['A' . $k]['lettre'] === '' || empty($_SESSION['gravure']['A' . $i]['police'])) {
         // espace
         $x_offset += 20;
         $total_w += 20;
@@ -208,14 +208,14 @@ $total_w = 0;
 $nb_lettres = 10;
 for($k = 10; $k >= 1; $k--)
 {
-    if(!isset($_SESSION['gravure']['B' . $k]) || empty($_SESSION['gravure']['B' . $k]['lettre']) || empty($_SESSION['gravure']['B' . $k]['police']))
+    if(!isset($_SESSION['gravure']['B' . $k]) || $_SESSION['gravure']['B' . $k]['lettre'] === '' || empty($_SESSION['gravure']['B' . $k]['police']))
         $nb_lettres--;
     else
         break;
 }
 for($i = $nb_lettres; $i >= 1; $i--)
 {
-    if(!isset($_SESSION['gravure']['B' . $i]) || empty($_SESSION['gravure']['B' . $i]['lettre']) || empty($_SESSION['gravure']['B' . $i]['police'])) {
+    if(!isset($_SESSION['gravure']['B' . $i]) || $_SESSION['gravure']['B' . $k]['lettre'] === '' || empty($_SESSION['gravure']['B' . $i]['police'])) {
         $x_offset -= 20;
         $total_w += 20;
         continue;

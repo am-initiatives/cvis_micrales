@@ -342,7 +342,7 @@ foreach(range('A','D') as $lettre)
 	{
 		$bidule = ($lettre.$i);
 		
-		if (isset($GLOBALS['gravure'][$bidule]) && !empty($GLOBALS['gravure'][$bidule]['minmaj']) && !empty($GLOBALS['gravure'][$bidule]['police']) && !empty($GLOBALS['gravure'][$bidule]['lettre']))
+		if (isset($GLOBALS['gravure'][$bidule]) && !empty($GLOBALS['gravure'][$bidule]['minmaj']) && !empty($GLOBALS['gravure'][$bidule]['police']) && isset($GLOBALS['gravure'][$bidule]['lettre']) && $GLOBALS['gravure'][$bidule]['lettre'] !== '')
 		{
 			if ($GLOBALS['gravure'][$bidule]['minmaj']=="Min")
 			{
