@@ -24,7 +24,7 @@ $cmd_stmt->close();
 if(!empty($GLOBALS['eqr_ref']))
 {
 	$eqr_stmt = $db->prepare("SELECT CONCAT(metal, ' - ', epaisseur, ' - ', IF(gravure, 'Avec gravure', 'Sans gravure'), ' - ', IF(encoche, 'Avec encoche', 'Sans encoche')) FROM equerres WHERE ref = ?");
-	$eqr_stmt->bind_param('d', $GLOBALS['eqr_ref']);
+	$eqr_stmt->bind_param('s', $GLOBALS['eqr_ref']);
 	$eqr_stmt->execute();
 	$eqr_stmt->bind_result($GLOBALS['eqr_str']);
 
@@ -43,7 +43,7 @@ else
 if(!empty($GLOBALS['chn_ref']))
 {
 	$chn_stmt = $db->prepare("SELECT CONCAT(metal, ' - ', longueur, ' - ', type, ' - ', masse_or) FROM chaines WHERE ref = ?");
-	$chn_stmt->bind_param('d', $GLOBALS['chn_ref']);
+	$chn_stmt->bind_param('s', $GLOBALS['chn_ref']);
 	$chn_stmt->execute();
 	$chn_stmt->bind_result($GLOBALS['chn_str']);
 
