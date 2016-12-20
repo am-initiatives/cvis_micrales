@@ -69,6 +69,15 @@ $insert_stmt->close();
 						<div id="lydiaButton">Payer avec Lydia</div>
 					</td>
 				</tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td colspan='2' style="font-size: 0.8em">
+                        Numéro de dossier temporaire : <?php echo str_pad($id_commande, 6, '0', STR_PAD_LEFT); ?>
+                    </td>
+                </tr>
 			</tbody>
 		</table>
 	</div>
