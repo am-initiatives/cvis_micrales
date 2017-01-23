@@ -41,14 +41,10 @@ session_start();
 							<option id="0" value="OR JAUNE">OR JAUNE</option>
 							<option id="1" value="OR BLANC">OR BLANC</option>
 							<option id="2" value="ARGENT">ARGENT</option>
+                            <option id="3" value="OR ROSE">OR ROSE</option>
 						</select>
 					</td>
-				<tr>
-					<td colspan="3">
-					<p style="font-size: 8pt;">Si tu souhaites une équerre en <b>or rose</b>, contacte le CVis à l'adresse <a href="mailto:cvis.ue@gadz.org">cvis.ue@gadz.org</a> avant le 20 décembre afin de vérifier la disponibilité.</p>
-					</td>
-				</tr>
-				</tr>
+                </tr>
 				<tr>
 					<td >
 						<p id="titre_epaisseur">Epaisseur</p>
