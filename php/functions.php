@@ -53,17 +53,6 @@ function getPrixLivraison()
 
 function getFraisDossier()
 {
-    /* 
-    Vu avec le Zi Cvis UE 214:
-    Les Clun'sois 214 ont une réduction de 25€ sur leur micrale
-    Le delta sera viré de leur compte de prom's.
-    A supprimer pour les années suivantes
-    Fantal
-    */
-    if(isset($_SESSION['proms']) && $_SESSION['proms'] == 'Cl214')
-    {
-        return 2.5 - 25.0; 
-    }
     return 2.5;
 }
 

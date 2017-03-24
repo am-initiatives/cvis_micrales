@@ -1,4 +1,5 @@
 <?php
+$actif = false; // changer à true pour rendre le site actif en période de vente de micrales
 $db_host = '127.0.0.1';
 $db_port = 3306;
 $db_user = 'root';
@@ -14,3 +15,4 @@ $lydia_private_token = '';
 $lydia_env = 'test';
 
 $db = new mysqli($db_host, $db_user, $db_pass, $db_name, $db_port);
+if(!$actif) exit("Les commandes de micrales sont zoquées. A l'année prochaine !");
